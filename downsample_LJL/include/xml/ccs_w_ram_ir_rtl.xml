@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spirit:abstractionDefinition xmlns:ccslib="http://www.mentor.com/ccslib" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4/index.xsd">
+
+   <spirit:vendor>mentor.com</spirit:vendor>
+   <spirit:library>mgc_busdefs</spirit:library>
+   <spirit:name>w_ram_ir_rtl</spirit:name>
+   <spirit:version>1.0</spirit:version>
+
+   <spirit:busType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="w_ram_ir" spirit:version="1.0"/>
+
+   <spirit:ports>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.w_ram_ir:O</ccslib:buspin><ccslib:pinassoc>write_ram:OPERATOR_PIN:D:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>I</spirit:logicalName>
+       <spirit:displayName>write_data</spirit:displayName>
+       <spirit:description>Write data input</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isData>true</spirit:isData>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.w_ram_ir:A</ccslib:buspin><ccslib:pinassoc>*:OPERATOR_PIN:I:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>A</spirit:logicalName>
+       <spirit:displayName>address</spirit:displayName>
+       <spirit:description>Address input</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isAddress>true</spirit:isAddress>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.w_ram_ir:WMASK:1</ccslib:buspin><ccslib:pinassoc>write_ram:OPERATOR_PIN:B:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>WMASK</spirit:logicalName>
+       <spirit:displayName>write_mask</spirit:displayName>
+       <spirit:description>Write Mask (Active-high) input</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.w_ram_ir:WMASK:0</ccslib:buspin><ccslib:pinassoc>write_ram:OPERATOR_PIN:B:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>WMASKn</spirit:logicalName>
+       <spirit:displayName>write_mask</spirit:displayName>
+       <spirit:description>Write Mask (Active-low) input</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.w_ram_ir:WSELECT:1</ccslib:buspin><ccslib:pinassoc>write_ram:CONSTANT:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>WSELECT</spirit:logicalName>
+       <spirit:displayName>write_select</spirit:displayName>
+       <spirit:description>Write Select (Active-high) input</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.w_ram_ir:WSELECT:0</ccslib:buspin><ccslib:pinassoc>write_ram:CONSTANT:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>WSELECTn</spirit:logicalName>
+       <spirit:displayName>write_select</spirit:displayName>
+       <spirit:description>Write Select (Active-low) input</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+   </spirit:ports>
+  <spirit:description>Write-port interface for memory</spirit:description>
+ </spirit:abstractionDefinition>
+

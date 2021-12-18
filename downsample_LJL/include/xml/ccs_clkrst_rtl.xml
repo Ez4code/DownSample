@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spirit:abstractionDefinition xmlns:ccslib="http://www.mentor.com/ccslib" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4/index.xsd">
+
+   <spirit:vendor>mentor.com</spirit:vendor>
+   <spirit:library>mgc_busdefs</spirit:library>
+   <spirit:name>clock_rtl</spirit:name>
+   <spirit:version>1.0</spirit:version>
+
+   <spirit:busType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="clock" spirit:version="1.0"/>
+
+   <spirit:ports>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.clock:CLOCK:1</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[CLOCK]:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>CLOCK</spirit:logicalName>
+       <spirit:description>Rising-edge Clock</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>true</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.clock:CLOCK:0</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[CLOCK]:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>CLOCKn</spirit:logicalName>
+       <spirit:description>Falling-edge Clock</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>true</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.clock:A_RST:1</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[A_RST]:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>A_RST</spirit:logicalName>
+       <spirit:description>Active-high Asynchronous Reset</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isReset>true</spirit:isReset>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.clock:A_RST:0</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[A_RST]:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>A_RSTn</spirit:logicalName>
+       <spirit:description>Active-low Asynchronous Reset</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isReset>true</spirit:isReset>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.clock:S_RST:1</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[S_RST]:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>S_RST</spirit:logicalName>
+       <spirit:description>Active-high Synchronous Reset</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isReset>true</spirit:isReset>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.clock:S_RST:0</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[S_RST]:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>S_RSTn</spirit:logicalName>
+       <spirit:description>Active-low Synchronous Reset</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isReset>true</spirit:isReset>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.clock:ENABLE:1</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[ENABLE]:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>ENABLE</spirit:logicalName>
+       <spirit:description>Active-high Clock Enable</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.clock:ENABLE:0</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[ENABLE]:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>ENABLEn</spirit:logicalName>
+       <spirit:description>Active-low Clock Enable</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+   </spirit:ports>
+  <spirit:description>Clock, Reset and Enable interface</spirit:description>
+ </spirit:abstractionDefinition>
+

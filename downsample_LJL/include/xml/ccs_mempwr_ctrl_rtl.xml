@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spirit:abstractionDefinition xmlns:ccslib="http://www.mentor.com/ccslib" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4/index.xsd">
+
+   <spirit:vendor>mentor.com</spirit:vendor>
+   <spirit:library>mgc_busdefs</spirit:library>
+   <spirit:name>mem_power_ctrl_rtl</spirit:name>
+   <spirit:version>1.0</spirit:version>
+
+   <spirit:busType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="mem_power_ctrl" spirit:version="1.0"/>
+
+   <spirit:ports>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:pinassoc>*:SIGNAL:[DIRECT]:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>LS</spirit:logicalName>
+       <spirit:description>Active-high light-sleep mode</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:pinassoc>*:SIGNAL:[DIRECT]:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>LSn</spirit:logicalName>
+       <spirit:description>Active-low light-sleep mode</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:pinassoc>*:SIGNAL:[DIRECT]:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>DS</spirit:logicalName>
+       <spirit:description>Active-high deep-sleep mode</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:pinassoc>*:SIGNAL:[DIRECT]:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>DSn</spirit:logicalName>
+       <spirit:description>Active-low deep-sleep mode</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:pinassoc>*:SIGNAL:[DIRECT]:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>SD</spirit:logicalName>
+       <spirit:description>Active-high shutdown mode</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:pinassoc>*:SIGNAL:[DIRECT]:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>SDn</spirit:logicalName>
+       <spirit:description>Active-low shutdown mode</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+
+   </spirit:ports>
+  <spirit:description>Memory power control (sleep modes) interface</spirit:description>
+ </spirit:abstractionDefinition>
+

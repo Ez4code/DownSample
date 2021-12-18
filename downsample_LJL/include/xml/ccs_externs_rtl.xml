@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spirit:abstractionDefinition xmlns:ccslib="http://www.mentor.com/ccslib" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4/index.xsd">
+
+   <spirit:vendor>mentor.com</spirit:vendor>
+   <spirit:library>mgc_busdefs</spirit:library>
+   <spirit:name>ccs_externs_rtl</spirit:name>
+   <spirit:version>1.0</spirit:version>
+
+   <spirit:busType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="ccs_externs" spirit:version="1.0"/>
+
+   <spirit:ports>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.directs:DIRECT_IN</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[DIRECT]:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>DIRECT_IN</spirit:logicalName>
+       <spirit:description>DIRECT input pinassoc</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>false</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.directs:DIRECT_OUT</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[DIRECT]:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>DIRECT_OUT</spirit:logicalName>
+       <spirit:description>DIRECT output pinassoc</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>false</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onSlave>
+       </spirit:wire>
+     </spirit:port>
+     
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.globals:GLOBAL_IN</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[GLOBAL]:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>GLOBAL_IN</spirit:logicalName>
+       <spirit:description>GLOBAL input pinassoc</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>false</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.globals:GLOBAL_OUT</ccslib:buspin><ccslib:pinassoc>*:SIGNAL:[GLOBAL]:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>GLOBAL_OUT</spirit:logicalName>
+       <spirit:description>GLOBAL output pinassoc</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>false</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onSlave>
+       </spirit:wire>
+     </spirit:port>
+     
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.unbounds:UNBOUND_IN:0</ccslib:buspin><ccslib:pinassoc>*:UNBOUND_IN:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>UNBOUND_IN0</spirit:logicalName>
+       <spirit:description>UNBOUND input default 0</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>false</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.unbounds:UNBOUND_IN:1</ccslib:buspin><ccslib:pinassoc>*:UNBOUND_IN:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>UNBOUND_IN1</spirit:logicalName>
+       <spirit:description>UNBOUND input default 1</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>false</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.unbounds:UNBOUND_OUT</ccslib:buspin><ccslib:pinassoc>*:UNBOUND_OUT:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>UNBOUND_OUT</spirit:logicalName>
+       <spirit:description>UNBOUND output</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isClock>false</spirit:isClock>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onSlave>
+       </spirit:wire>
+     </spirit:port>
+
+   </spirit:ports>
+  <spirit:description>Catapult external signal interfaces</spirit:description>
+ </spirit:abstractionDefinition>
+

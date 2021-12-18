@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ccslib="http://www.mentor.com/ccslib" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4/index.xsd">
+
+  <spirit:vendor>mentor.com</spirit:vendor>
+  <spirit:library>memory_lib</spirit:library>
+  <spirit:name>calypto_mem_1p</spirit:name>
+  <spirit:version>1.0</spirit:version>
+
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>clocks</spirit:name>
+      <spirit:description>Clock interface</spirit:description>
+      <spirit:busType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLOCK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+
+    <spirit:busInterface>
+      <spirit:name>mem_readwrite_IF</spirit:name>
+      <spirit:description>Memory readwrite port interface</spirit:description>
+      <spirit:busType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="rw_ram" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="rw_ram_rtl" spirit:version="1.0"/>
+      <spirit:portMaps>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>q</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>wadr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>radr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ENABLE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>me</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>d</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>W</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>rw</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>M</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>wm</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+      </spirit:portMaps>
+    </spirit:busInterface>
+
+    <spirit:busInterface>
+      <spirit:name>mem_power_IF</spirit:name>
+      <spirit:description>Memory power control interface</spirit:description>
+      <spirit:busType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="mem_power_ctrl" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="mem_power_ctrl_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>LS</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>ls</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DS</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>ds</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SD</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sd</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+
+      </spirit:portMaps>
+    </spirit:busInterface>
+
+  </spirit:busInterfaces>
+
+  <spirit:model>
+
+    <spirit:modelParameters>
+
+      <!-- Order of parameters must match expected order of SystemC template parameters in synthesizeable model -->
+      <!-- (i.e. First three must be address-bus-bit-width, data-bus-bit-width, number-of-memory-elements) -->
+      <spirit:modelParameter>
+        <spirit:name>AW</spirit:name>
+        <spirit:description>Memory address bus width</spirit:description>
+        <spirit:dataType>int</spirit:dataType>
+      </spirit:modelParameter>
+
+      <spirit:modelParameter>
+        <spirit:name>DW</spirit:name>
+        <spirit:description>Memory data bus width</spirit:description>
+        <spirit:dataType>int</spirit:dataType>
+      </spirit:modelParameter>
+
+      <spirit:modelParameter>
+        <spirit:name>NW</spirit:name>
+        <spirit:description>Number of memory words</spirit:description>
+        <spirit:dataType>int</spirit:dataType>
+        <spirit:value>32</spirit:value>
+      </spirit:modelParameter>
+
+      <spirit:modelParameter>
+        <spirit:name>WT</spirit:name>
+        <spirit:description>Memory write through mode</spirit:description>
+        <spirit:dataType>int</spirit:dataType>
+        <spirit:value>0</spirit:value>
+      </spirit:modelParameter>
+
+      <spirit:modelParameter>
+        <spirit:name>ds_sd_zero</spirit:name>
+        <spirit:description>ds_sd_zero</spirit:description>
+        <spirit:dataType>int</spirit:dataType>
+        <spirit:value>1</spirit:value>
+      </spirit:modelParameter>
+
+      <spirit:modelParameter>
+        <spirit:name>UHD_arch</spirit:name>
+        <spirit:description>uhd arch</spirit:description>
+        <spirit:dataType>int</spirit:dataType>
+        <spirit:value>0</spirit:value>
+      </spirit:modelParameter>
+
+      <spirit:modelParameter>
+        <spirit:name>READ_BEFORE_WRITE</spirit:name>
+        <spirit:description>Read before write mode (1==rbw, 0==raw)</spirit:description>
+        <spirit:dataType>int</spirit:dataType>
+        <spirit:value>0</spirit:value>
+      </spirit:modelParameter>
+
+      <spirit:modelParameter>
+        <spirit:name>LS_DEPTH</spirit:name>
+        <spirit:description>Ls depth</spirit:description>
+        <spirit:dataType>int</spirit:dataType>
+        <spirit:value>1</spirit:value>
+      </spirit:modelParameter>
+
+    </spirit:modelParameters>
+
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>behav_simulation</spirit:name>
+        <spirit:envIdentifier>::</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>calypto_mem_1p</spirit:modelName>
+        <spirit:fileSetRef>fileset_sim</spirit:fileSetRef>
+      </spirit:view>
+    </spirit:views>
+
+    <spirit:ports>
+
+      <spirit:port>
+        <spirit:name>q</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left>DW-1</spirit:left>
+            <spirit:right>0</spirit:right>
+          </spirit:vector>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>me</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>rw</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>radr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left>AW-1</spirit:left>
+            <spirit:right>0</spirit:right>
+          </spirit:vector>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>wadr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left>AW-1</spirit:left>
+            <spirit:right>0</spirit:right>
+          </spirit:vector>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>d</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left>DW-1</spirit:left>
+            <spirit:right>0</spirit:right>
+          </spirit:vector>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>wm</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left>DW-1</spirit:left>
+            <spirit:right>0</spirit:right>
+          </spirit:vector>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>ls</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>ds</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+        </spirit:wire>
+      </spirit:port>
+
+      <spirit:port>
+        <spirit:name>sd</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>fileset_sim</spirit:name>
+      <spirit:file>
+        <!-- If the pathname is relative path, it is treated as relative to this XML file -->
+        <spirit:name>./calypto_mem_1p.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+
+  <spirit:description>Sample Single Port RAM, 1 cycle read</spirit:description>
+
+  <spirit:vendorExtensions>
+    <ccslib:componentVendorExtensions>
+      <ccslib:vendor>Calypto Design Systems</ccslib:vendor>
+      <ccslib:technology>Sample 65nm</ccslib:technology>
+      <ccslib:iptype>MEMORY</ccslib:iptype>
+      <ccslib:calypto_mem_type>1P</ccslib:calypto_mem_type>
+      <ccslib:calypto_mem_words>NW</ccslib:calypto_mem_words>
+      <ccslib:calypto_mem_width>DW</ccslib:calypto_mem_width>
+      <ccslib:calypto_mem_read_delay>0.3</ccslib:calypto_mem_read_delay>
+      <ccslib:calypto_mem_read_latency>1</ccslib:calypto_mem_read_latency>
+      <ccslib:calypto_mem_write_delay>0.0</ccslib:calypto_mem_write_delay>
+      <ccslib:calypto_mem_write_latency>0</ccslib:calypto_mem_write_latency>
+      <ccslib:calypto_mem_area>1234</ccslib:calypto_mem_area>
+      <ccslib:calypto_mem_mask_bits>yes</ccslib:calypto_mem_mask_bits>
+      <ccslib:calypto_mem_light_sleep_pin>yes</ccslib:calypto_mem_light_sleep_pin>
+      <ccslib:calypto_mem_deep_sleep_pin>yes</ccslib:calypto_mem_deep_sleep_pin>
+      <ccslib:calypto_mem_shut_down_pin>yes</ccslib:calypto_mem_shut_down_pin>
+      <ccslib:calypto_mem_pipelined>no</ccslib:calypto_mem_pipelined>
+      <ccslib:calypto_mem_ready_handshake>no</ccslib:calypto_mem_ready_handshake>
+    </ccslib:componentVendorExtensions>
+  </spirit:vendorExtensions>
+
+</spirit:component>

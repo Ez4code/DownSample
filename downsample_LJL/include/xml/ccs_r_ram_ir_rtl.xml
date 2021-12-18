@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spirit:abstractionDefinition xmlns:ccslib="http://www.mentor.com/ccslib" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4/index.xsd">
+
+   <spirit:vendor>mentor.com</spirit:vendor>
+   <spirit:library>mgc_busdefs</spirit:library>
+   <spirit:name>r_ram_ir_rtl</spirit:name>
+   <spirit:version>1.0</spirit:version>
+
+   <spirit:busType spirit:vendor="mentor.com" spirit:library="mgc_busdefs" spirit:name="r_ram_ir" spirit:version="1.0"/>
+
+   <spirit:ports>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.r_ram_ir:I</ccslib:buspin><ccslib:pinassoc>read_ram:OPERATOR_PIN:D:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>O</spirit:logicalName>
+       <spirit:displayName>read_data</spirit:displayName>
+       <spirit:description>Read data output</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isData>true</spirit:isData>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.r_ram_ir:A</ccslib:buspin><ccslib:pinassoc>*:OPERATOR_PIN:I:</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>A</spirit:logicalName>
+       <spirit:displayName>address</spirit:displayName>
+       <spirit:description>Address input</spirit:description>
+       <spirit:wire>
+         <spirit:qualifier>
+           <spirit:isAddress>true</spirit:isAddress>
+         </spirit:qualifier>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.r_ram_ir:RMASK:1</ccslib:buspin><ccslib:pinassoc>read_ram:OPERATOR_PIN:B:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>RMASK</spirit:logicalName>
+       <spirit:displayName>read_mask</spirit:displayName>
+       <spirit:description>Read Mask (Active-high) input</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.r_ram_ir:RMASK:0</ccslib:buspin><ccslib:pinassoc>read_ram:OPERATOR_PIN:B:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>RMASKn</spirit:logicalName>
+       <spirit:displayName>read_mask</spirit:displayName>
+       <spirit:description>Read Mask (Active-low) input</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.r_ram_ir:RSELECT:1</ccslib:buspin><ccslib:pinassoc>read_ram:CONSTANT:1</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>RSELECT</spirit:logicalName>
+       <spirit:displayName>read_select</spirit:displayName>
+       <spirit:description>Read Select (Active-high) input</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>0</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+     <spirit:port>
+       <spirit:vendorExtensions>
+         <ccslib:portVendorExtensions> <ccslib:buspin>mgc_busdefs.r_ram_ir:RSELECT:0</ccslib:buspin><ccslib:pinassoc>read_ram:CONSTANT:0</ccslib:pinassoc> </ccslib:portVendorExtensions>
+       </spirit:vendorExtensions>
+       <spirit:logicalName>RSELECTn</spirit:logicalName>
+       <spirit:displayName>read_select</spirit:displayName>
+       <spirit:description>Read Select (Active-low) input</spirit:description>
+       <spirit:wire>
+         <spirit:onMaster>
+           <spirit:direction>out</spirit:direction>
+         </spirit:onMaster>
+         <spirit:onSlave>
+           <spirit:direction>in</spirit:direction>
+         </spirit:onSlave>
+         <spirit:defaultValue>1</spirit:defaultValue>
+       </spirit:wire>
+     </spirit:port>
+
+   </spirit:ports>
+  <spirit:description>Read-port interface for memory</spirit:description>
+ </spirit:abstractionDefinition>
+
