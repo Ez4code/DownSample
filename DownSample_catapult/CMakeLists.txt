@@ -15,6 +15,7 @@ include_directories( ${INCLUDE} )
 
 set(SOURCE
         "TestBench.cpp"
+        "class_hier_design.cpp"
         "../include/bmpUtil/bmp_io.cpp"
         "../include/ccs_bmpfile.cpp"
         )

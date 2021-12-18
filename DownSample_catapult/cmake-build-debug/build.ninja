@@ -79,6 +79,13 @@ build CMakeFiles/DownSample.dir/TestBench.cpp.o: CXX_COMPILER__DownSample_Debug 
   OBJECT_DIR = CMakeFiles/DownSample.dir
   OBJECT_FILE_DIR = CMakeFiles/DownSample.dir
 
+build CMakeFiles/DownSample.dir/class_hier_design.cpp.o: CXX_COMPILER__DownSample_Debug /home/boy666/workspace/CLionWs/DownSample/class_hier_design.cpp || cmake_object_order_depends_target_DownSample
+  DEP_FILE = CMakeFiles/DownSample.dir/class_hier_design.cpp.o.d
+  FLAGS = -g -std=gnu++11
+  INCLUDES = -I/home/boy666/workspace/CLionWs/DownSample/../include -I/home/boy666/workspace/CLionWs/DownSample/../include/bmpUtil -isystem /usr/local/include/opencv
+  OBJECT_DIR = CMakeFiles/DownSample.dir
+  OBJECT_FILE_DIR = CMakeFiles/DownSample.dir
+
 build CMakeFiles/DownSample.dir/home/boy666/workspace/CLionWs/include/bmpUtil/bmp_io.cpp.o: CXX_COMPILER__DownSample_Debug /home/boy666/workspace/CLionWs/include/bmpUtil/bmp_io.cpp || cmake_object_order_depends_target_DownSample
   DEP_FILE = CMakeFiles/DownSample.dir/home/boy666/workspace/CLionWs/include/bmpUtil/bmp_io.cpp.o.d
   FLAGS = -g -std=gnu++11
@@ -101,7 +108,7 @@ build CMakeFiles/DownSample.dir/home/boy666/workspace/CLionWs/include/ccs_bmpfil
 #############################################
 # Link the executable DownSample
 
-build DownSample: CXX_EXECUTABLE_LINKER__DownSample_Debug CMakeFiles/DownSample.dir/TestBench.cpp.o CMakeFiles/DownSample.dir/home/boy666/workspace/CLionWs/include/bmpUtil/bmp_io.cpp.o CMakeFiles/DownSample.dir/home/boy666/workspace/CLionWs/include/ccs_bmpfile.cpp.o | /usr/local/lib/libopencv_dnn.so.3.4.16 /usr/local/lib/libopencv_highgui.so.3.4.16 /usr/local/lib/libopencv_ml.so.3.4.16 /usr/local/lib/libopencv_objdetect.so.3.4.16 /usr/local/lib/libopencv_shape.so.3.4.16 /usr/local/lib/libopencv_stitching.so.3.4.16 /usr/local/lib/libopencv_superres.so.3.4.16 /usr/local/lib/libopencv_videostab.so.3.4.16 /usr/local/lib/libopencv_calib3d.so.3.4.16 /usr/local/lib/libopencv_features2d.so.3.4.16 /usr/local/lib/libopencv_flann.so.3.4.16 /usr/local/lib/libopencv_photo.so.3.4.16 /usr/local/lib/libopencv_video.so.3.4.16 /usr/local/lib/libopencv_videoio.so.3.4.16 /usr/local/lib/libopencv_imgcodecs.so.3.4.16 /usr/local/lib/libopencv_imgproc.so.3.4.16 /usr/local/lib/libopencv_core.so.3.4.16
+build DownSample: CXX_EXECUTABLE_LINKER__DownSample_Debug CMakeFiles/DownSample.dir/TestBench.cpp.o CMakeFiles/DownSample.dir/class_hier_design.cpp.o CMakeFiles/DownSample.dir/home/boy666/workspace/CLionWs/include/bmpUtil/bmp_io.cpp.o CMakeFiles/DownSample.dir/home/boy666/workspace/CLionWs/include/ccs_bmpfile.cpp.o | /usr/local/lib/libopencv_dnn.so.3.4.16 /usr/local/lib/libopencv_highgui.so.3.4.16 /usr/local/lib/libopencv_ml.so.3.4.16 /usr/local/lib/libopencv_objdetect.so.3.4.16 /usr/local/lib/libopencv_shape.so.3.4.16 /usr/local/lib/libopencv_stitching.so.3.4.16 /usr/local/lib/libopencv_superres.so.3.4.16 /usr/local/lib/libopencv_videostab.so.3.4.16 /usr/local/lib/libopencv_calib3d.so.3.4.16 /usr/local/lib/libopencv_features2d.so.3.4.16 /usr/local/lib/libopencv_flann.so.3.4.16 /usr/local/lib/libopencv_photo.so.3.4.16 /usr/local/lib/libopencv_video.so.3.4.16 /usr/local/lib/libopencv_videoio.so.3.4.16 /usr/local/lib/libopencv_imgcodecs.so.3.4.16 /usr/local/lib/libopencv_imgproc.so.3.4.16 /usr/local/lib/libopencv_core.so.3.4.16
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libopencv_dnn.so.3.4.16  /usr/local/lib/libopencv_highgui.so.3.4.16  /usr/local/lib/libopencv_ml.so.3.4.16  /usr/local/lib/libopencv_objdetect.so.3.4.16  /usr/local/lib/libopencv_shape.so.3.4.16  /usr/local/lib/libopencv_stitching.so.3.4.16  /usr/local/lib/libopencv_superres.so.3.4.16  /usr/local/lib/libopencv_videostab.so.3.4.16  /usr/local/lib/libopencv_calib3d.so.3.4.16  /usr/local/lib/libopencv_features2d.so.3.4.16  /usr/local/lib/libopencv_flann.so.3.4.16  /usr/local/lib/libopencv_photo.so.3.4.16  /usr/local/lib/libopencv_video.so.3.4.16  /usr/local/lib/libopencv_videoio.so.3.4.16  /usr/local/lib/libopencv_imgcodecs.so.3.4.16  /usr/local/lib/libopencv_imgproc.so.3.4.16  /usr/local/lib/libopencv_core.so.3.4.16
   OBJECT_DIR = CMakeFiles/DownSample.dir
